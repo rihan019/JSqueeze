@@ -1,44 +1,78 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* Reset margin, padding, and set box-sizing globally */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set the base font style for body, buttons, and inputs */
 body,
 button,
 input {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Style for the heading */
 .heading {
     text-align: center;
-    background-color: #00b00f;
+    background-color: #00a65a; /* Changed color to a more subtle green */
     color: #fff;
-    padding: 1rem;
+    padding: 1.5rem; /* Increased padding for better spacing */
+    font-size: 1.8rem; /* Increased font size */
+    border-radius: 5px; /* Added rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
 }
 
+/* Main content container styling */
 .main_content {
-    width: 1000px;
-    margin: 1rem auto;
-    box-shadow: 0px 3px 3px #ccc;
-    padding: 1rem;
-    border-top: 3px solid #00b00f;
+    width: 90%; /* Changed to a percentage for better responsiveness */
+    max-width: 1000px;
+    margin: 2rem auto; /* Increased margin for better spacing */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Added a more prominent shadow */
+    padding: 2rem; /* Increased padding for a roomier layout */
+    border-top: 5px solid #00a65a; /* Adjusted the border size and color */
+    background-color: #f9f9f9; /* Added a light background for contrast */
+    border-radius: 8px; /* Added rounded corners */
 }
 
+/* Input element styling */
 input {
     display: block;
-    margin: 1rem;
+    margin: 1.5rem auto; /* Centered the input with auto margin */
+    padding: 0.75rem; /* Added padding for better clickability */
+    width: 80%; /* Increased width to make the input more prominent */
+    border: 2px solid #ccc; /* Made border thicker for more definition */
+    border-radius: 5px; /* Rounded input corners */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Added inner shadow for depth */
+    transition: border-color 0.3s ease; /* Smooth transition effect */
 }
 
+/* Input hover effect */
+input:hover,
+input:focus {
+    border-color: #00a65a; /* Border changes color on hover or focus */
+}
+
+/* Image container styling */
 #original_image_container,
 #compressed_image_container {
-    border: 1px solid #ff6600;
-    padding: 1rem;
-    margin: 1rem;
+    border: 2px solid #ff6600; /* Increased border thickness */
+    padding: 1.5rem; /* Added more padding */
+    margin: 2rem 0; /* Added more margin for spacing */
+    border-radius: 8px; /* Rounded corners for containers */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow for depth */
 }
 
+/* Compressed image container hover effect */
 #compressed_image_container {
     cursor: pointer;
+    transition: transform 0.3s ease; /* Added smooth scaling on hover */
+}
+
+#compressed_image_container:hover {
+    transform: scale(1.05); /* Slightly enlarges the container on hover */
 }
